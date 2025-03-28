@@ -3,7 +3,16 @@ import javax.swing.*;
 public class SistemasNumericos {
     public static void main(String[] args) {
         String numeroStr = JOptionPane.showInputDialog(null, "Ingresa un número entero");
-        int numeroDecimal = Integer.parseInt(numeroStr);
+        int numeroDecimal = 0;
+        try{
+            numeroDecimal = Integer.parseInt(numeroStr);
+        } catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Error, debe ingresar  un número estero.");
+            main(args);
+            System.exit(0);
+        }
+
+
         System.out.println("numeroDecimal = " + numeroDecimal);
 
         String resultadoBinario = "Número binario de " + numeroDecimal + " = " + Integer.toBinaryString(numeroDecimal);
