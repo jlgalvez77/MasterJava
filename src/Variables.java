@@ -12,5 +12,13 @@ public class Variables {
             numero2 = 10;
         }
         System.out.println("numero2 = " + numero2);
+
+        String nombre;
+        nombre = "Jose";
+
+        if (numero > 10){
+            nombre = "Juan";
+        }
+        System.out.println(nombre);
     }
 }
